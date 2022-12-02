@@ -70,7 +70,7 @@ ls --help
 
 ### • Burada “-p” parametresi ile eger “deneme” klasörü yoksa hata vermez, olusturur ve onun da icine “edip” klasörü olusturur
 ```bash
-mkdir –p /home/deneme/edip
+mkdir –p /home/deneme/yakup
 ```
 
 ### • Dosyanin ilk 10 satirini görüntülemek icin kullanilir
@@ -164,34 +164,34 @@ o cd /			-->	bu komut ile kök dizine gidilir
 o cd, cd ~, cd $home	-->	bu komutlarin hepsi ayni anlamdadir ve ana dizine gider
 o cd ..			-->	bir üst dizine gecmek icin kullanilir
 o cd -			-->	bir önceki dizine gecmek icin kullanilir
-o cd edip\dosya		-->	adi "edip dosya" olan klasöre gecmek icin kullanilir. "\" isareti bosluk(space) anlamindadir
+o cd yakup\dosya		-->	adi "yakup dosya" olan klasöre gecmek icin kullanilir. "\" isareti bosluk(space) anlamindadir
 ```
 
 ### • Dosya yada klasör silmek icin kullanilir (ici dolu klasörleri silmez)
 ```bash
-rm edip.txt
+rm yakup.txt
 ```
 ```bash
 o rm -r			-->	(recursive) bu komut ic ice klasör silmek icin kullanilir (ici dolu olsa da siler)
 o rm -f			--> 	(force) silme isleminde zorlamak icin kullanilir
 o rmdir			-->	bu komut ile ici bos klasörler silinebilir
-o rmdir -p edip/dene	-->	(parents) ic ice klasör silmek icin kullanilir
+o rmdir -p yakup/dene	-->	(parents) ic ice klasör silmek icin kullanilir
 ```
 
 ### • Klasör olusturmak icin kullanilir
 ```bash
-mkdir edip
+mkdir yakup
 ```
 ```bash
 o mkdir dosya{1..5}		-->	ilk ismi "dosya" olan bes adet klasör olusturur (dosya1, dosya2 ...)
 o mkdir .gizli			--> 	ismin basindaki "." ile gizli klasör olusturulur
-o mkdir -p edip/dene		-->	(parents) ic ice klasör olusturmak icin kullanilir
-o mkdir -m 444 edip		-->	(mode) edip adinda sadece yazma izinleri olan bir klasör olusturur
+o mkdir -p yakup/dene		-->	(parents) ic ice klasör olusturmak icin kullanilir
+o mkdir -m 444 yakup		-->	(mode) edip adinda sadece yazma izinleri olan bir klasör olusturur
 ```
 
 ### • Istenilen uzantiya sahip dosya olusturmak icin kullanilir
 ```bash
-touch edip.txt edip.yml
+touch yakup.txt yakup.yml
 ```
 ```bash
 o touch -t 20072008		-->	Dosyanin olusturulma tarihini istedigimiz bir tarih olarak yapmamizi saglar
@@ -199,25 +199,25 @@ o touch -t 20072008		-->	Dosyanin olusturulma tarihini istedigimiz bir tarih ola
 
 ### • Bir dosyanin adini degistirmek veya bir dosyayi tasimak icin kullanilir
 ```bash
-mv edip.doc ali.doc
+mv yakup.doc ali.doc
 ```
 ```bash
-o mv edip.doc n/can.doc		-->	Dosyayi bir yere tasimak icin kullanilir. Istersek ismini tasima sirasinda degistirebiliriz
+o mv yakup.doc n/can.doc		-->	Dosyayi bir yere tasimak icin kullanilir. Istersek ismini tasima sirasinda degistirebiliriz
 ```
 
 ### • Bir dosyayi bir yerden baska bir yere kopyalamak icin kullanilir. Istersek kopyalama sirasinda isim degistirebiliriz
 ```bash
-cp edip.doc home/ali.doc
+cp yakup.doc home/ali.doc
 ```
 
 ### • Dosya varsa onu acar eger yoksa yeni dosya olusturur ve "nano" uygulamasinda acar
 ```bash
-nano edip.txt
+nano yakup.txt
 ```
 
 ### • Dosya varsa onu acar eger yoksa yeni dosya olusturur ve "vim" uygulamasinda acar
 ```bash
-vim edip.txt
+vim yakup.txt
 ```
 
 ### • Ekrana istedigimiz yaziyi yazdirmak icin kullanilir
@@ -242,7 +242,7 @@ o history !15			-->	15. girilen kodu tekrar calistirmak icin kullanilir
 
 ### • (changemode) Dosya izinlerini degistirmek icin kullanilir. Burada "edip" dosyasina calisma izni verir
 ```bash
-chmod +x edip.sh
+chmod +x yakup.sh
 ```
 ```bash
 - (rwx)(rw-)(r--)
@@ -264,11 +264,11 @@ o 6		-->	okuma - yazma izinlerini verir
 o 7 		--> 	okuma - yazma - calistirma izinlerini verir
 ```
 ```bash
-o chmod -x edip.sh		-->	burada tüm kullanicilarin calistirma iznini alir	
-o chmod +rw edip.sh		-->	tüm kullanicilar icin okuma ve yazma izni verir
-o chmod 777 edip.sh		-->	burada dosyaya tüm kullanicilar icin bütün izinleri verir 
-o chmod ugo=rwx	edip.sh		--> 	u >> user, g >> group, o >> other.  Tüm kullanicilar icin bütün izinleri verir 
-o chmod ug=r edip.sh		--> 	dosyaya sadece user ve group icin okuma izni verir 
+o chmod -x yakup.sh		-->	burada tüm kullanicilarin calistirma iznini alir	
+o chmod +rw yakup.sh		-->	tüm kullanicilar icin okuma ve yazma izni verir
+o chmod 777 yakup.sh		-->	burada dosyaya tüm kullanicilar icin bütün izinleri verir 
+o chmod ugo=rwx	yakup.sh		--> 	u >> user, g >> group, o >> other.  Tüm kullanicilar icin bütün izinleri verir 
+o chmod ug=r yakup.sh		--> 	dosyaya sadece user ve group icin okuma izni verir 
 ```
 
 ### • Ekrani temizlemek icin kullanilir
@@ -278,12 +278,12 @@ clear
 
 ### • Bir komutu kisayol olarak tanimlamak icin kullanilir
 ```bash
-alias edip="ls -al"
+alias yakup="ls -al"
 ```
 
 ### • Tanimli bir alias kisayolunu silmek icin kullanilir
 ```bash
-unalias edip
+unalias yakup
 ```
 
 ### • Bulundugumuz dizinde bulunan tüm dosyalari alt klasörler ile birlikte listeler
